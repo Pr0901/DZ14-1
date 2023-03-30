@@ -2,6 +2,7 @@ public class Smartphone extends Product {
 
 
     private String generator;
+
     public String getGenerator() {
 
         return generator;

@@ -12,26 +12,19 @@ public class ProductManager {
     }
 
 
-    public Product[] getItems() {
-        Product[] all = repo.getItems();
-        Product[] reversed = new Product[all.length];
-        for (int i = 0; i < reversed.length; i++) {
-            reversed[i] = all[all.length - 1 - i];
-        }
-        return reversed;
-    }
-
     public Product[] findAll() {
         return repo.getItems();
     }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
-        int i = 0;
-        for (Product item: repo.getItems()) {
+        for (Product item : repo.findAll()) {
             if (matches(item, text)) {
-               result[i] =  item;
+                Product[] tmp = new Product[result.length + 1];
+                tmp[result.length] = item;
+                result = tmp;
             }
+
         }
         return result;
     }

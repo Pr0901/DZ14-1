@@ -2,6 +2,7 @@ public class Book extends Product {
 
     private String author;
 
+
     public String getAuthor() {
 
         return author;
@@ -16,4 +17,6 @@ public class Book extends Product {
         super(id, name, price);
         this.author = author;
     }
+
+
 }
