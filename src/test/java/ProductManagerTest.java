@@ -75,5 +75,4 @@ public class ProductManagerTest {
         Assertions.assertEquals(expected, actual);
     }
 
-
 }

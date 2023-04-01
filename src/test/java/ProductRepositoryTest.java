@@ -34,8 +34,6 @@ public class ProductRepositoryTest {
         Product[] actual = repo.getItems();
 
         Assertions.assertArrayEquals(expected, actual);
-
-
     }
 
 
