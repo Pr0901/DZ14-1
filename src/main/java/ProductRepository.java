@@ -2,6 +2,11 @@ public class ProductRepository {
 
     private Product[] items = new Product[0];
 
+    public Product[] getItems() {
+
+        return items;
+    }
+
     public void save(Product item) {
         Product[] tmp = new Product[items.length + 1];
         for (int i = 0; i < items.length; i++) {
@@ -23,11 +28,6 @@ public class ProductRepository {
         }
         items = tmp;
 
-    }
-
-    public Product[] getItems() {
-
-        return items;
     }
 
     public Product[] findAll() {
