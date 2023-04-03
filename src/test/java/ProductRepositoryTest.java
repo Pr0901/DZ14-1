@@ -18,9 +18,21 @@ public class ProductRepositoryTest {
         Product[] actual = repo.getItems();
 
         Assertions.assertArrayEquals(expected, actual);
-
-
     }
+
+
+    @Test
+    public void addItemsThrow() {
+        ProductRepository repo = new ProductRepository();
+        repo.save(item1);
+        repo.save(item2);
+        repo.save(item3);
+
+        Assertions.assertThrows(AlreadyExistsException.class, () -> {
+            repo.save(item2);
+        });
+    }
+
 
     @Test
     public void removeById() {
@@ -35,5 +47,20 @@ public class ProductRepositoryTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+
+    @Test
+    public void removeByIdThrow() {
+        ProductRepository repo = new ProductRepository();
+        repo.save(item1);
+        repo.save(item2);
+        repo.save(item3);
+
+
+        Assertions.assertThrows(NotFoundException.class, () -> {
+            repo.removeById(4);
+        });
+    }
+
 
 }
