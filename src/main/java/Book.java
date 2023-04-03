@@ -2,7 +2,6 @@ public class Book extends Product {
 
     private String author;
 
-
     public String getAuthor() {
 
         return author;

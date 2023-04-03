@@ -11,7 +11,6 @@ public class ProductManager {
         repo.save(item);
     }
 
-
     public Product[] findAll() {
         return repo.getItems();
     }

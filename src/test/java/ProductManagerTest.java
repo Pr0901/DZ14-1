@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class ProductManagerTest {
 
-
     ProductRepository repo = new ProductRepository();
     ProductManager manager = new ProductManager(repo);
 

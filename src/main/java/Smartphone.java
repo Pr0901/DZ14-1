@@ -17,3 +17,4 @@ public class Smartphone extends Product {
         this.generator = generator;
     }
 }
+
